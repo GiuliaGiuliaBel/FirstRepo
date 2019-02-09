@@ -1,0 +1,28 @@
+<input id="inputID"/>
+<button id="makeUpperLower">Make Beautiful</button>
+<input id="outputID"/>
+
+<script>
+var MakeUpperLower = document.getElementById("makeUpperLower")
+var getInputArea = document.getElementById("inputID")
+var getOutputArea = document.getElementById("outputID")
+
+MakeUpperLower.addEventListener("click", makeTextLowerUpperClick);
+function makeTextLowerUpperClick(){
+    var inputAreaValue = getInputArea.value
+  getOutputArea.value = fmakeTextLowerUpperCase(inputAreaValue) 
+}
+
+function fmakeTextLowerUpperCase(str)  {
+var str2 = [];
+
+for (i = 0; i < str.length; i=i+1) 
+{
+if (i % 2 == 0 && str2[i]!=str[i].toUpperCase()) {
+str2[i] = str[i].toUpperCase()
+} else { str2[i] = str[i].toLowerCase() }
+}
+var v5 = str2.join("")
+return v5;
+}
+</script>
